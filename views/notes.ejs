@@ -17,14 +17,20 @@
         </div>
         <div class="card-body">
           <%= notes[i] %>
-        </div>
-       
-      </div>
+    <button onClick='deleteNote(<%=i %>)' class='btn btn-danger'> Delete</button>
+        </div>  
+    </div>
       <% } %>  
      <form method="post" action="/notes">
           <textarea name="note"></textarea>
           <input type="submit" value="Save" />
         </form>
-  
+        
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+ 
+  <script src= "/js/ajax.js"></script>
   </body>
 </html>
